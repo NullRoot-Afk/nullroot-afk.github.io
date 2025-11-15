@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAGA</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 
@@ -27,14 +30,20 @@
             <a class="item" href="#">Productos</a>
             <a class="item" href="#">Algo</a>
             <span class="animacion"></span>
-
         </nav>
     </header>
 
     <section class="principal">
         <h1 class="titulo">SAGA</h1>
-        <p class="slogan">Gestiona con confianza. Crece con inteligencia  </p>
+        <p class="slogan">Gestiona con confianza, crece con inteligencia</p>
         <button class="button" tabindex="0">Dar el paso</button>
+        <button class="go-down-arrow" onclick= scrollToInfo()>
+            <img  class="circle-button-shadow" src="arrow_downward_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Flecha hacia abajo">
+        </button>
+        <article class ="info" id="info">
+            <h2 class="subtitulo">Tu aliado en la gestión empresarial</h2>
+            <p class="descripcion">En SAGA, entendemos que la gestión empresarial puede ser un desafío. Por eso, hemos desarrollado una plataforma integral que simplifica tus procesos y te ayuda a tomar decisiones informadas. Desde la contabilidad hasta la gestión de inventarios, SAGA está diseñado para adaptarse a las necesidades de tu negocio y facilitar tu crecimiento.</p>
+        </article>
     </section>
 
     <div class="overlay" id="overlay"></div>

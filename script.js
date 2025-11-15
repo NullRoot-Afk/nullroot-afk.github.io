@@ -11,5 +11,8 @@ overlay.addEventListener('click', () => {
     menu.classList.remove('active');
     overlay.style.display = 'none';
 });
-
+function scrollToInfo() {
+    const infoSection = document.getElementById("info");
+    infoSection.scrollIntoView({ behavior: "smooth" });
+}
 
