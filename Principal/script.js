@@ -2,6 +2,8 @@ const btn = document.getElementById("hamburgerBtn");
 const menu = document.getElementById("menu");
 const overlay = document.getElementById("overlay");
 const goDownBtn =document. getElementById("go_down_btn")
+const logo = document.getElementById("foto-logo")
+
 
 btn.addEventListener('click', () => {
     menu.classList.toggle('active'); // Alterna la clase 'active' en el side-menu
@@ -22,4 +24,7 @@ function scrollToInfo() {
     infoSection.scrollIntoView({ behavior: "smooth" });
 
 }
+logo.addEventListener('click', () =>{
+    window.location.href = "/Principal/index.html"
+})
 
