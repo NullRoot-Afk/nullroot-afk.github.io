@@ -20,6 +20,20 @@ body {
     flex-direction: column;
     min-height: 100dvh;
 }
+
+
+/* Fondo particles */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: #0a0a0a;
+}
+
+/* Header */
 .header {
     position: sticky;
     top: 0;
@@ -32,6 +46,7 @@ body {
     background: #1e1e1e;
     z-index: 1;
     box-shadow: 0px 4px 10px 0px black;
+
 }
 
 .foto-logo {
@@ -71,6 +86,8 @@ body {
     background: red;
     cursor: pointer;
 }
+
+/* Menú lateral */
 .side-menu {
     transform: translateX(100%); 
     opacity: 0;
@@ -123,11 +140,7 @@ body {
 .side-menu a:hover {
     background: #db2828;
 }
-
-.slide-in-left{
-    animation: slide-in-left .5s cubic-bezier(.25, .46, .45, .94)both;
-
-}
+/* OSCURECER FONDO */
 .overlay {
     display: none;
     position: fixed;
@@ -144,9 +157,34 @@ body {
     text-align: center;
     position: relative;
     gap: 20px;
-    padding-top: 10dvh; /* separación real del header */
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-top: 20dvh; /* separación real del header */
+}
+
+
+.titulo {
+    font-family: "Audiowide", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.slogan {
+    font-size: 1.8rem;
+    color: #ccc;
+}
+.button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background:linear-gradient(150deg,rgba(253, 29, 29, 1) 22%, rgb(136, 5, 5) 75%);
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}                   
+
+.subtitulo {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
 }
 .nav-computador{
     display: none;
@@ -177,49 +215,54 @@ li:hover{
     background-color: red;
     cursor: pointer;
 }
-.separador{
-    margin-top: 60px;
-    margin-bottom: 60px;
-
-    width: 90%;
-    height: 5px;
-    background-color: #00eaff;
+.contacto-section{
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    min-height:100%;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 10px;
+    min-height: 300px;
+    min-width: 200px;
+    background-color: #8C220B;
     border-radius: 5px;
+    box-shadow:0px 0px 10px 5px #db2828;
 }
-#grafico-SAGA{
-    height: 200px;
-    width: 200px;
-    
-}
-.contenedor-posicionado{
-    width: 100%;
-}
-#tierra-png{
-    height: 200px;
-    border-radius: 50%;
-}
-
-.aboutUs-img{
-    width: 100%;
-    height: 100%;
-    border: 1px solid cadetblue;
+#button-submit{
+    background: linear-gradient(135deg, cyan, #b30000 85%);
+    border: none;
     border-radius: 5px;
+    padding: 5px 10px;
 }
-h3.subtitulo{
-    margin-top: 150px;
+#button-submit:hover{
+    transform: scale(1.05);
+    cursor: pointer;
 }
-.contenedor-img-saga{
-    min-width: 100px;
-    max-height: 204px;
-}
-p.parrafo{
-    margin-top: 100px;
-    line-height: 20px;
+input:hover{
+    cursor: text;
 }
 
+/* Media Queries: ajustar responsividad horizontal */
 @media(min-height: 680px) {
     .info {
         justify-content: center;
+
+    }
+}
+/*media horizontal celulares*/
+@media(min-width:450px){
+    .principal{
+        justify-content: flex-start;
+    }
+    .go-down-arrow{
+        left: 95%;
+        bottom: 20px;
     }
 }
 @media(min-width: 1024px){
