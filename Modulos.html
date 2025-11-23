@@ -3,21 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Contactanos-SAGA</title>
+    <link rel="stylesheet" href="Modulos.css">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
-
-<body>
-
+<body id="modulos-body">
     <div id="particles-js"></div>
 
     <header class="header" id="header">
         <img src="SAGA_icon.jpg" class="foto-logo" id="foto-logo" alt="Logo de la empresa SAGA">
-        
+            
         <button class="hamburger" id="hamburgerBtn">
             <span></span>
             <span></span>
@@ -30,36 +26,47 @@
             <li><a class="item" href="contactanos.html">Contacto</a></li>
         </ul>
         <nav class="side-menu" id="menu">
+
             <span class="animacion"></span>
+
             <a class="item" href="index.html">Inicio</a>
             <a class="item" href="AboutUs.html">Sobre Nosotros</a>
             <a class="item" href="Modulos.html">Modulos</a>
             <a class="item" href="contactanos.html">Contacto</a>
+
             <span class="animacion"></span>
         </nav>
     </header>
+        <h1 class="titulo">Modulos</h1>
+        <div id="mod1" class="modulos-item">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="7" r="4"/>
+                <path d="M5.5 21c1-4 4-6 6.5-6s5.5 2 6.5 6"/>
+            </svg>
+        </div>
+        <div id="mod2" class="modulos-item">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <path d="M3 9h18"/>
+                <path d="M9 9v12"/>
+            </svg>
+        </div>
+        
+        <div id="mod3" class="modulos-item">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2h12v20l-6-3-6 3V2z"/>
+                <path d="M9 7h6M9 11h6M9 15h4"/>
+            </svg>
 
-    <section class="principal">
-        <h1 class="titulo">SAGA</h1>
-        <p class="slogan">Gestiona con confianza, crece con inteligencia</p>
-        <button class="button" tabindex="0" onclick="window.location.href ='contactanos.html'">Dar el paso</button>
-        <button class="go-down-arrow visible" id="go_down_btn" onclick= scrollToInfo()>
-            <img  class="circle-button-shadow" src="arrow_downward_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Flecha hacia abajo">
-        </button>
-        <article class ="info" id="info">
-            <h2 class="subtitulo">Tu aliado en la gestión empresarial</h2>
-            <p class="descripcion">En SAGA, entendemos que la gestión empresarial puede ser un desafío. Por eso, hemos desarrollado una plataforma integral que simplifica tus procesos y te ayuda a tomar decisiones informadas. Desde la contabilidad hasta la gestión de inventarios, SAGA está diseñado para adaptarse a las necesidades de tu negocio y facilitar tu crecimiento.</p>
-        </article>
-    </section>
+        </div>
 
-    <div class="overlay" id="overlay"></div>
-
+    <div class="overlay" id="overlay"> </div>
+    
     <script src="script.js"></script>
-
     <script>
         particlesJS.load('particles-js', 'particles.json');
     </script>
-
+    
+    
 </body>
 </html>
-

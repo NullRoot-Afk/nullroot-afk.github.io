@@ -16,13 +16,56 @@ html, body {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100dvh; /*El elemento debe medir al menos 100% de la altura visible del viewport*/
-    
-    /* dvh Dynamic Viewport Height para el tamaño real del viewport cuando aparece
-    y desaparece la barra de navegacion en celulares */ 
+    padding:0 20px;
+    gap: 10px;
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 80px 80px;
+    grid-template-areas: "header header header" 
+                        "titulo titulo titulo" 
+                        "modulo1 modulo2 modulo3" ;
+}
+.titulo, #mod1, #mod2, #mod3 {
+    position: relative;
+    z-index: 10;
+}
 
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: titulo;
+    grid-column: 1/4;
+}
+.modulos-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px); /*para soporte a navagador safari*/
+    border: 2px solid black;
+    box-shadow: 0px 0px 10px 2px black;
+    border-radius: 5px;
+    background: transparent;
+}
+.modulos-item:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+#mod1{
+
+    grid-area: modulo1;
+    grid-column: 1/2;
+
+
+}
+#mod2{
+    grid-area: modulo2;
+}
+#mod3{
+    grid-area: modulo3;
 }
 
 
@@ -39,7 +82,8 @@ body {
 
 /* Header */
 .header {
-    position: sticky;
+    grid-area: header;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -48,7 +92,7 @@ body {
     align-items: center;
     padding: 15px 20px;
     background: #1e1e1e;
-    z-index: 1;
+    z-index: 99999999;
     box-shadow: 0px 4px 10px 0px black;
 
 }
@@ -83,7 +127,7 @@ body {
     width: 34px;
     background: white;
     border-radius: 5px;
-    transition: background 0.4s ease;
+    transition: 0.4s ease;
 }
 
 .hamburger:hover span {
@@ -144,18 +188,13 @@ body {
 .side-menu a:hover {
     background: #db2828;
 }
-
-.slide-in-left{
-    animation: slide-in-left .5s cubic-bezier(.25, .46, .45, .94)both;
-
-}
-
 /* OSCURECER FONDO */
 .overlay {
     display: none;
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.5);
+    z-index: 9999;
 }
 
 .principal {
@@ -167,102 +206,13 @@ body {
     text-align: center;
     position: relative;
     gap: 20px;
+    z-index: 1;
     padding-top: 20dvh; /* separación real del header */
 }
 
 
-.titulo {
-    font-family: "Audiowide", sans-serif;
-    font-size: 2rem;
-    margin-bottom: 15px;
-}
 
-.slogan {
-    font-size: 1.8rem;
-    color: #ccc;
-}
-.button {
-    margin-top: 20px;
-    padding: 15px 30px;
-    background:linear-gradient(150deg,rgba(253, 29, 29, 1) 22%, rgb(136, 5, 5) 75%);
-    color: white;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}                   
-.button:hover {
-    box-shadow:2px 2px 10px 2px rgb(136, 5, 5);
 
-}
-.button:focus {
-    outline: 2px solid #00eaff;
-}
-.go-down-arrow {
-    display: none;
-    width: 50px;
-    height: 50px;
-    position: fixed;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: none;
-    border: 2px solid red;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
-}
-.go-down-arrow:hover {
-    background:red;
-}
-.go-down-arrow img{
-    border-radius: 50%;
-    z-index: 10;
-    pointer-events: none;
-}
-.go-down-arrow.visible{
-    display: flex;
-
-}
-.circle-button-shadow{
-    box-shadow: 0px 0px 10px 10px rgb(136, 5, 5);
-
-}
-.info {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 0 20px;
-    min-height: 80vh;
-    max-width: 600px;
-    margin-top: 120px;
-    scroll-margin-top: 30px;
-
-}
-#quienesSomosBody{
-    position: relative;
-    background-image: url(/Photos/SAGA_icon-Photoroom.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 0;
-}
-#quienesSomosBody::before{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.8);
-    z-index: -1;
-}
-
-.info .descripcion {
-    font-size: 1.2rem;
-    color: #ccc;
-    line-height: 1.5;
-}
-.subtitulo {
-    font-size: 1.5rem;
-    margin-bottom: 50px;
-}
 .nav-computador{
     display: none;
     position: absolute;
@@ -288,21 +238,6 @@ body {
     background-color: transparent;
     border-radius: 5px;
 }
-li:hover{
-    background-color: red;
-    cursor: pointer;
-}
-@keyframes slide-in-left{
-    0%{
-        transform: translateX(-1000px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-/* Media Queries: ajustar responsividad horizontal */
 @media(min-height: 680px) {
     .info {
         justify-content: center;
@@ -311,13 +246,10 @@ li:hover{
 }
 /*media horizontal celulares*/
 @media(min-width:450px){
-    .principal{
-        justify-content: flex-start;
+    .contacto-section{
+        margin-top: 100px;
     }
-    .go-down-arrow{
-        left: 95%;
-        bottom: 20px;
-    }
+    
 }
 @media(min-width: 1024px){
     .hamburger{
@@ -327,5 +259,7 @@ li:hover{
         display: flex;
     }
 }
+
+
 
 
