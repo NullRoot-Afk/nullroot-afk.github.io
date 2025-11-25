@@ -247,7 +247,7 @@ form{
     transform: scale(1.05);
     cursor: pointer;
 }
-input:hover{
+input:hover,textarea:hover{
     cursor: text;
 }
 

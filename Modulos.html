@@ -1,72 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactanos-SAGA</title>
-    <link rel="stylesheet" href="Modulos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-</head>
-<body id="modulos-body">
-    <div id="particles-js"></div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contactanos-SAGA</title>
+        <link rel="stylesheet" href="Modulos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    </head>
+        <header class="header" id="header">
+            <img src="SAGA_icon.jpg" class="foto-logo" id="foto-logo" alt="Logo de la empresa SAGA">
+                
+            <button class="hamburger" id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-computador">
+                <li><a class="item" href="index.html">Home</a></li>
+                <li><a class="item" href="AboutUs.html">Sobre Nosotros</a></li>
+                <li><a class="item" href="Modulos.html">Modulos</a></li>
+                <li><a class="item" href="contactanos.html">Contacto</a></li>
+            </ul>
+            <nav class="side-menu" id="menu">
 
-    <header class="header" id="header">
-        <img src="SAGA_icon.jpg" class="foto-logo" id="foto-logo" alt="Logo de la empresa SAGA">
+                <span class="animacion"></span>
+
+                <a class="item" href="index.html">Inicio</a>
+                <a class="item" href="AboutUs.html">Sobre Nosotros</a>
+                <a class="item" href="Modulos.html">Modulos</a>
+                <a class="item" href="contactanos.html">Contacto</a>
+
+                <span class="animacion"></span>
+            </nav>
+        </header>
+    
+    <body id="modulos-body">
+        <div id="particles-js"></div>
+
+            <h1 class="titulo">Modulos</h1>
+            <div id="mod1" class="modulos-item">
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="7" r="4"/>
+                    <path d="M5.5 21c1-4 4-6 6.5-6s5.5 2 6.5 6"/>
+                </svg>
+            </div>
+
+            <div class="description" id="description1">
+                <h2>Modulo de recursos humanos</h2>
+                <p>Permite gestionar la información del personal, incluyendo contratación, datos laborales, asistencia, permisos, remuneraciones y evaluaciones. Automatiza procesos clave como registro de empleados, control de ausencias y administración de nóminas, facilitando la organización y el seguimiento del ciclo completo del trabajador dentro de la empresa.</p>
+            </div>
+
+            <div id="mod2" class="modulos-item">
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                    <path d="M3 9h18"/>
+                    <path d="M9 9v12"/>
+                </svg>
+            </div>
+
+            <div class="description" id="description2">
+                <h2>Modulo de planificacion</h2>
+                <p>Permite organizar, programar y coordinar actividades, recursos y tiempos del negocio. Facilita la creación de planes de trabajo, asignación de tareas, control de plazos y seguimiento del avance, asegurando que los procesos se ejecuten de manera ordenada y eficiente.</p>
+            </div>
             
-        <button class="hamburger" id="hamburgerBtn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="nav-computador">
-            <li><a class="item" href="index.html">Home</a></li>
-            <li><a class="item" href="AboutUs.html">Sobre Nosotros</a></li>
-            <li><a class="item" href="Modulos.html">Modulos</a></li>
-            <li><a class="item" href="contactanos.html">Contacto</a></li>
-        </ul>
-        <nav class="side-menu" id="menu">
+            <div id="mod3" class="modulos-item">
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2h12v20l-6-3-6 3V2z"/>
+                    <path d="M9 7h6M9 11h6M9 15h4"/>
+                </svg>
 
-            <span class="animacion"></span>
+            </div>
+            <div class="description" id="description3">
+                <h2>Modulo de facturas</h2>
+                <p>Gestiona la emisión, recepción y control de facturas. Permite generar documentos de venta, registrar facturas de proveedores, validar montos, llevar seguimiento de pagos y mantener un historial ordenado de transacciones, asegurando una administración financiera clara y precisa.</p>
+            </div>
 
-            <a class="item" href="index.html">Inicio</a>
-            <a class="item" href="AboutUs.html">Sobre Nosotros</a>
-            <a class="item" href="Modulos.html">Modulos</a>
-            <a class="item" href="contactanos.html">Contacto</a>
-
-            <span class="animacion"></span>
-        </nav>
-    </header>
-        <h1 class="titulo">Modulos</h1>
-        <div id="mod1" class="modulos-item">
-            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="7" r="4"/>
-                <path d="M5.5 21c1-4 4-6 6.5-6s5.5 2 6.5 6"/>
-            </svg>
-        </div>
-        <div id="mod2" class="modulos-item">
-            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                <path d="M3 9h18"/>
-                <path d="M9 9v12"/>
-            </svg>
-        </div>
+        <div class="overlay" id="overlay"> </div>
         
-        <div id="mod3" class="modulos-item">
-            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M6 2h12v20l-6-3-6 3V2z"/>
-                <path d="M9 7h6M9 11h6M9 15h4"/>
-            </svg>
-
-        </div>
-
-    <div class="overlay" id="overlay"> </div>
-    
-    <script src="script.js"></script>
-    <script>
-        particlesJS.load('particles-js', 'particles.json');
-    </script>
-    
-    
-</body>
+        <script src="modulos.js"></script>
+        <script>
+            particlesJS.load('particles-js', 'particles.json');
+        </script>
+    </body>
 </html>

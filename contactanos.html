@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactanos-SAGA</title>
-    <link rel="stylesheet" href="contactanos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-</head>
-<body id="contacto-body">
-    <div id="particles-js"></div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contactanos-SAGA</title>
+        <link rel="stylesheet" href="contactanos.css">
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    </head>
+        <body id="contacto-body">
+            <div id="particles-js"></div>
 
-    <header class="header" id="header">
-        <img src="SAGA_icon.jpg" class="foto-logo" id="foto-logo" alt="Logo de la empresa SAGA">
+            <header class="header" id="header">
+                <img src="SAGA_icon.jpg" class="foto-logo" id="foto-logo" alt="Logo de la empresa SAGA">
+                    
+                <button class="hamburger" id="hamburgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-computador">
+                    <li><a class="item" href="index.html">Home</a></li>
+                    <li><a class="item" href="AboutUs.html">Sobre Nosotros</a></li>
+                    <li><a class="item" href="Modulos.html">Modulos</a></li>
+                    <li><a class="item" href="contactanos.html">Contacto</a></li>
+                </ul>
+                <nav class="side-menu" id="menu">
+
+                    <span class="animacion"></span>
+
+                    <a class="item" href="index.html">Inicio</a>
+                    <a class="item" href="AboutUs.html">Sobre Nosotros</a>
+                    <a class="item" href="Modulos.html">Modulos</a>
+                    <a class="item" href="contactanos.html">Contacto</a>
+
+                    <span class="animacion"></span>
+                </nav>
+            </header>
+            <section class="contacto-section">
+                <form id="form" action="https://aterbonus.dev/api/toys/forms" method="post">
+                    <label for="name">Nombre:</label><br>
+                    <input type="text" name="name" id="name" maxlength="200" required><br>
+
+                    <label for="email">Correo electronico:</label><br>
+                    <input type="email" name="email" id="email" maxlength="200" required><br>
+
+                    <label for="subject">Asunto:</label><br>
+                    <input type="subject" name="subject" id="subject" maxlength="200" required><br>
+                    <label for="content">Mensaje:</label><br>
+                    <textarea type="text" name="content" id="content" maxlength="1000" required></textarea><br><br>
+
+                    <button id="button-submit" type="submit">Enviar</button>
+                </form>
+            </section>
             
-        <button class="hamburger" id="hamburgerBtn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="nav-computador">
-            <li><a class="item" href="index.html">Home</a></li>
-            <li><a class="item" href="AboutUs.html">Sobre Nosotros</a></li>
-            <li><a class="item" href="Modulos.html">Modulos</a></li>
-            <li><a class="item" href="contactanos.html">Contacto</a></li>
-        </ul>
-        <nav class="side-menu" id="menu">
+            <div class="overlay" id="overlay"> </div>
+            
+            <script src="script.js"></script>
+            <script>
+                particlesJS.load('particles-js', 'particles.json');
+            </script>
+        </body>
+            
 
-            <span class="animacion"></span>
-
-            <a class="item" href="index.html">Inicio</a>
-            <a class="item" href="AboutUs.html">Sobre Nosotros</a>
-            <a class="item" href="Modulos.html">Modulos</a>
-            <a class="item" href="contactanos.html">Contacto</a>
-
-            <span class="animacion"></span>
-        </nav>
-    </header>
-    <section class="contacto-section">
-        <form id="form" action="https://aterbonus.dev/api/toys/forms" method="post">
-            <label for="name">Nombre:</label><br>
-            <input type="text" name="name" id="name" required><br>
-
-            <label for="email">Correo electronico:</label><br>
-            <input type="email" name="email" id="email" required><br>
-
-            <label for="subject">Asunto:</label><br>
-            <input type="subject" name="subject" id="subject" required><br>
-            <label for="content">Mensaje:</label><br>
-            <input type="content" name="content" id="content" required><br><br>
-
-            <button id="button-submit" type="submit">Enviar</button>
-        </form>
-    </section>
-    
-    <div class="overlay" id="overlay"> </div>
-    
-    <script src="script.js"></script>
-    <script>
-        particlesJS.load('particles-js', 'particles.json');
-    </script>
-    
-    
-</body>
 </html>
